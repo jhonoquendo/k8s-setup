@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: jenkins
+  namespace: sonar-space
 spec:
   ports:
     - name: http
@@ -17,6 +18,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: jenkins
+  namespace: sonar-space
 spec:
   replicas: 1
   selector:
